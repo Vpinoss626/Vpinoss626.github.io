@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ibrahima Diallo (vpinoss / Vpinoss626) — Biographie & Portfolio Officiel</title>
+  <meta name="description" content="Biographie officielle d'Ibrahima Diallo (vpinoss / Vpinoss626), étudiant en télécommunications et informatique à l'ESMT Conakry, développeur full-stack/hardware et entrepreneur technologique en Guinée (Sania, MedAI Africa, Eduguinee, LT-vEB, Sira-card, Jeunes Innovateurs)." />
+  <meta name="keywords" content="Ibrahima Diallo, vpinoss, Vpinoss626, Guinée, Conakry, ESMT, Jeunes Innovateurs, E-FONIJ, Sania, MedAI Africa, Eduguinee, LT-vEB, Sira-card, VBG Guinée, développeur, entrepreneur technologique" />
+  <meta name="author" content="Ibrahima Diallo" />
+  <meta property="og:title" content="Ibrahima Diallo (vpinoss) — Développeur & Entrepreneur Technologique" />
+  <meta property="og:description" content="Étudiant en informatique et télécommunications (ESMT), fondateur de la communauté Jeunes Innovateurs et créateur de solutions numériques, matérielles et d'IA en Guinée." />
+  <meta property="og:type" content="profile" />
+  <meta property="og:url" content="https://vpinoss626.github.io/" />
+
+  <!-- Données structurées Schema.org pour le référencement Google (Knowledge Graph) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ibrahima Diallo",
+    "alternateName": ["vpinoss", "Vpinoss626"],
+    "birthDate": "2004-03-05",
+    "birthPlace": {
+      "@type": "Place",
+      "name": "Ratoma, Conakry, Guinée"
+    },
+    "nationality": "Guinéenne",
+    "jobTitle": "Étudiant en Informatique & Télécommunications, Développeur Logiciel & Entrepreneur Technologique",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "École Supérieure Multinationale des Télécommunications (ESMT)"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Conakry",
+      "addressCountry": "GN"
+    },
+    "email": "mailto:ad7733041@gmail.com",
+    "telephone": "+224626465158",
+    "url": "https://vpinoss626.github.io/",
+    "sameAs": [
+      "https://github.com/Vpinoss626"
+    ],
+    "knowsAbout": [
+      "Télécommunications",
+      "Développement Web et Mobile",
+      "Programmation C et C++",
+      "Intelligence Artificielle",
+      "Systèmes Embarqués et Électronique",
+      "Radio Logicielle (SDR)",
+      "Next.js",
+      "Firebase",
+      "FlutterFlow"
+    ]
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            emerald: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              200: '#a7f3d0',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .emerald-gradient {
+      background: linear-gradient(135deg, #064e3b 0%, #059669 60%, #10b981 100%);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 hidden items-center gap-2.5 bg-emerald-900 text-white px-4 py-3 rounded-xl shadow-lg text-sm font-medium transition-all duration-300">
+    <svg class="w-5 h-5 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+    </svg>
+    <span id="toast-msg">Copié dans le presse-papiers !</span>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-emerald-100 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-lg emerald-gradient flex items-center justify-center text-white font-bold text-sm shrink-0 shadow-sm">
+          ID
+        </div>
+        <div class="truncate">
+          <span class="font-bold text-slate-900 text-sm sm:text-base">Ibrahima Diallo</span>
+          <span class="hidden sm:inline-block ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">@vpinoss · Vpinoss626</span>
+        </div>
+      </div>
+
+      <nav class="flex items-center gap-1 sm:gap-2 overflow-x-auto py-1">
+        <button id="tab-btn-bio" data-tab="bio" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-emerald-600 text-white transition whitespace-nowrap">
+          Biographie & Profil
+        </button>
+        <button id="tab-btn-projects" data-tab="projects" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition whitespace-nowrap">
+          Projets (6)
+        </button>
+        <button id="tab-btn-copy" data-tab="copy" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition whitespace-nowrap">
+          Textes à copier
+        </button>
+        <button id="tab-btn-publish" data-tab="publish" class="nav-tab px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold text-slate-600 hover:bg-emerald-50 hover:text-emerald-700 transition whitespace-nowrap">
+          Mettre sur Google
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="emerald-gradient text-white py-10 sm:py-14 px-4 sm:px-6">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+      <!-- Photo / Avatar Slot -->
+      <div class="relative group shrink-0">
+        <div id="avatar-container" class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl bg-white/10 backdrop-blur border-4 border-white/80 shadow-xl overflow-hidden flex flex-col items-center justify-center relative">
+          <img id="profile-img" src="" alt="Ibrahima Diallo (vpinoss)" class="w-full h-full object-cover hidden" />
+          <div id="avatar-placeholder" class="flex flex-col items-center justify-center text-center p-3">
+            <span class="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">ID</span>
+            <span class="text-[11px] text-emerald-100 mt-1 font-medium">Ibrahima Diallo</span>
+          </div>
+        </div>
+        <label for="photo-upload" class="mt-2.5 inline-flex items-center justify-center gap-1.5 w-full px-3 py-1.5 rounded-lg bg-white text-emerald-800 hover:bg-emerald-50 text-xs font-semibold shadow cursor-pointer transition">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <span>Ajouter ma photo</span>
+        </label>
+        <input id="photo-upload" type="file" accept="image/*" class="hidden" />
+      </div>
+
+      <!-- Identity & Summary -->
+      <div class="flex-1 text-center md:text-left">
+        <div class="inline-flex flex-wrap items-center justify-center md:justify-start gap-2 mb-3">
+          <span class="px-3 py-1 rounded-full bg-white/15 backdrop-blur text-xs font-semibold tracking-wide uppercase">
+            Conakry, Guinée
+          </span>
+          <span class="px-3 py-1 rounded-full bg-emerald-900/50 border border-emerald-400/30 text-xs font-medium">
+            Pseudonymes : vpinoss · Vpinoss626
+          </span>
+          <span class="px-3 py-1 rounded-full bg-emerald-900/50 border border-emerald-400/30 text-xs font-medium">
+            ESMT (LTI — 2e année)
+          </span>
+        </div>
+
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight leading-tight">
+          Ibrahima Diallo
+        </h1>
+        <p class="mt-2 text-base sm:text-lg text-emerald-50 font-medium max-w-3xl">
+          Étudiant en informatique et télécommunications, développeur logiciel &amp; matériel et entrepreneur technologique concevant des solutions numériques, électroniques et d'intelligence artificielle adaptées aux réalités locales.
+        </p>
+
+        <div class="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-3">
+          <a href="https://github.com/Vpinoss626" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-emerald-900 font-semibold text-xs sm:text-sm shadow hover:bg-emerald-50 transition">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            github.com/Vpinoss626
+          </a>
+          <button id="btn-copy-email" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-800/80 hover:bg-emerald-800 text-white border border-emerald-400/30 font-semibold text-xs sm:text-sm transition">
+            <span>ad7733041@gmail.com</span>
+          </button>
+          <button id="btn-copy-phone" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-emerald-800/80 hover:bg-emerald-800 text-white border border-emerald-400/30 font-semibold text-xs sm:text-sm transition">
+            <span>+224 626 46 51 58</span>
+          </button>
+          <button id="btn-download-html-hero" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-xs sm:text-sm shadow transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Télécharger le site (.html)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto w-full px-4 sm:px-6 py-8 flex-1">
+
+    <!-- TAB 1: BIOGRAPHIE & PROFIL COMPLET -->
+    <div id="panel-bio" class="tab-panel space-y-8">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <!-- Left Column: Fiche d'identité & Compétences -->
+        <aside class="space-y-6">
+          <!-- Fiche Synthétique (Style Wikipédia / Knowledge Panel) -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="bg-emerald-600 text-white px-5 py-3.5 flex items-center justify-between">
+              <h2 class="font-bold text-sm uppercase tracking-wider">Fiche Biographique</h2>
+              <span class="text-xs bg-white/20 px-2 py-0.5 rounded font-medium">Vérifié</span>
+            </div>
+            <div class="p-5 divide-y divide-slate-100 text-sm">
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Nom complet</span>
+                <span class="font-semibold text-slate-900 text-right">Ibrahima Diallo</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Pseudonymes</span>
+                <span class="font-semibold text-emerald-700 text-right">vpinoss, Vpinoss626</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Naissance</span>
+                <span class="font-semibold text-slate-900 text-right">5 mars 2004 · Ratoma, Conakry</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Résidence</span>
+                <span class="font-semibold text-slate-900 text-right">Conakry, Guinée</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Formation</span>
+                <span class="font-semibold text-slate-900 text-right">Licence Télécoms &amp; Info (LTI, 2e année) — ESMT</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Certification</span>
+                <span class="font-semibold text-slate-900 text-right">Google IT Support (Coursera, avr. 2026)</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Communauté</span>
+                <span class="font-semibold text-slate-900 text-right">Fondateur de « Jeunes Innovateurs » (E-FONIJ)</span>
+              </div>
+              <div class="py-2.5 flex justify-between gap-4">
+                <span class="text-slate-500 font-medium">Distinctions</span>
+                <span class="font-semibold text-slate-900 text-right">Finaliste PARI 2024 · Finaliste MIME AUF 2025</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stack Technique & Domaines d'expertise -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4">
+            <h3 class="font-bold text-slate-900 text-base flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              Domaines d'expertise
+            </h3>
+
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Programmation &amp; Web/Mobile</p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">C / C++ (Code::Blocks, VS Code)</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Next.js</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Firebase</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">FlutterFlow</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Algorithmique (LT-vEB)</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Intelligence Artificielle &amp; Prototypage</p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium">API Gemini</span>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium">Google AI Studio</span>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium">Cursor</span>
+                <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-medium">v0.dev</span>
+              </div>
+            </div>
+
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Électronique, Réseaux &amp; Télécoms</p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Proteus 8 Professional</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">KiCad</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Radio Logicielle (SDR)</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Diagnostic &amp; Réparation Matérielle</span>
+                <span class="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 text-xs font-medium">Architecture Réseau</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Column (2 cols wide): Narrative Biography & Timeline -->
+        <div class="lg:col-span-2 space-y-6">
+          <!-- Narrative Bio Card -->
+          <article class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8 space-y-5 leading-relaxed text-slate-700">
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4">
+              <div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">Biographie officielle</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Rédaction factuelle pour moteurs de recherche, presse et partenaires</p>
+              </div>
+              <button id="btn-copy-main-bio" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-semibold text-xs transition">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                </svg>
+                <span>Copier la biographie</span>
+              </button>
+            </div>
+
+            <div id="main-bio-content" class="space-y-4 text-sm sm:text-base">
+              <p>
+                <strong>Ibrahima Diallo</strong>, né le 5 mars 2004 à Ratoma (Conakry, Guinée) et connu dans l'écosystème technologique sous les pseudonymes <strong>vpinoss</strong> et <strong>Vpinoss626</strong>, est un étudiant en informatique et télécommunications, développeur logiciel et entrepreneur technologique guinéen basé à Conakry. Son travail se concentre sur la conception de solutions numériques, matérielles et d'intelligence artificielle adaptées aux réalités économiques et sociales d'Afrique de l'Ouest.
+              </p>
+
+              <h3 class="text-base font-bold text-slate-900 pt-2">Débuts techniques et formation académique</h3>
+              <p>
+                Dès ses débuts, Ibrahima Diallo développe une approche pragmatique de la technologie par la maintenance et la réparation matérielle (ordinateurs et smartphones), l'expérimentation électronique (<em>hardware hacking</em>, conception de circuits sous Proteus et KiCad, radio logicielle SDR) ainsi que l'apprentissage autodidacte de la programmation. Parallèlement à ses activités techniques et au sourcing d'équipements électroniques, il poursuit des études supérieures en <strong>Licence en Télécommunications et Informatique (LTI)</strong> à l'<strong>École Supérieure Multinationale des Télécommunications (ESMT)</strong>, où il évolue en deuxième année universitaire. En avril 2026, il obtient également le <em>Google IT Support Professional Certificate</em> sur Coursera.
+              </p>
+
+              <h3 class="text-base font-bold text-slate-900 pt-2">Innovations technologiques et projets d'impact</h3>
+              <p>
+                Partant du constat que de nombreux défis quotidiens en Guinée — dans les secteurs de la santé, de l'éducation, de l'assainissement urbain et de la gestion municipale — manquent d'outils accessibles, Ibrahima Diallo conçoit des prototypes combinant électronique à bas coût, développement web/mobile (Next.js, Firebase, FlutterFlow) et intelligence artificielle (API Gemini) :
+              </p>
+              <ul class="list-disc pl-5 space-y-2">
+                <li><strong>Sania (Sanya)</strong> : écosystème intelligent de gestion des déchets et place de marché biface connectant trieurs, recycleurs et consommateurs autour de poubelles intelligentes multi-compartiments (plastiques, canettes, déchets organiques), développé en collaboration avec Mariam sur le volet affaires.</li>
+                <li><strong>MedAI Africa</strong> : initiative d'innovation médicale lancée en 2025 associant du matériel optique à bas coût et des modèles d'intelligence artificielle pour démocratiser le diagnostic médical.</li>
+                <li><strong>Eduguinee</strong> : plateforme numérique de tutorat mettant en relation des parents d'élèves avec des étudiants-tuteurs vérifiés pour le soutien scolaire à domicile, présentée publiquement en tant qu'exposant sélectionné au <em>Salon des Étudiants Entrepreneurs</em> en avril 2026.</li>
+                <li><strong>LT-vEB (Logical Thermal van Emde Boas)</strong> : bibliothèque open-source en C++ publiée sur GitHub en mars 2026, dédiée à l'optimisation de structures de données algorithmiques.</li>
+                <li><strong>Sira-card</strong> : système de carte numérique et application mobile destiné au suivi des recettes municipales et à la vérification des marchands.</li>
+                <li><strong>VBG GUINÉE</strong> : plateforme numérique de protection, d'alerte et d'assistance contre les violences basées sur le genre, développée entre décembre 2025 et février 2026.</li>
+              </ul>
+
+              <h3 class="text-base font-bold text-slate-900 pt-2">Engagement communautaire et distinctions</h3>
+              <p>
+                Engagé pour le partage de compétences, il fonde et anime la communauté <strong>« Jeunes Innovateurs »</strong> sur la plateforme <strong>E-FONIJ</strong>, fédérant près d'une centaine de membres autour du mentorat entre pairs, de l'apprentissage du code et de la préparation aux programmes d'innovation. Son parcours est salué par plusieurs sélections : finaliste du <strong>Prix Annuel de la Recherche et de l'Innovation (PARI)</strong> à Kindia en décembre 2024, finaliste du concours <strong>« Mon Idée, Mon Entreprise » (MIME)</strong> organisé par l'Agence Universitaire de la Francophonie (AUF) en avril 2025, et participant actif aux programmes <em>Orange Summer Challenge 2025</em>, <em>Climathon Conakry 2026</em>, <em>Sahel Tech Innovation Challenge 2026 (STIC'26)</em>, <em>SADEN-Fulbright Ideation Challenge</em> et <em>Lonnin Fanka Skills Camp</em> (octobre 2026).
+              </p>
+            </div>
+          </article>
+
+          <!-- Chronologie / Distinctions -->
+          <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+            <h3 class="text-lg font-bold text-slate-900 mb-5">Repères chronologiques &amp; distinctions</h3>
+            <div class="relative border-l-2 border-emerald-200 ml-3 space-y-6 pl-6">
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Octobre 2026</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Lonnin Fanka Skills Camp &amp; Challenges Internationaux 2026</h4>
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Participation active aux programmes Climathon Conakry 2026, Sahel Tech Innovation Challenge (STIC'26) et SADEN-Fulbright Ideation Challenge.</p>
+              </div>
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Avril 2026</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Salon des Étudiants Entrepreneurs &amp; Certification Google</h4>
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Sélectionné comme exposant officiel pour présenter la plateforme <strong>Eduguinee</strong> et obtention du <em>Google IT Support Professional Certificate</em> sur Coursera.</p>
+              </div>
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Mars 2026</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Publication Open-Source de LT-vEB sur GitHub</h4>
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Mise en ligne de la bibliothèque C++ <em>Logical Thermal van Emde Boas</em> dédiée à l'optimisation de structures de données algorithmiques.</p>
+              </div>
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Avril 2025</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Finaliste du concours « Mon Idée, Mon Entreprise » (MIME — AUF)</h4>
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Sélection en finale du concours entrepreneurial de l'Agence Universitaire de la Francophonie et lancement du projet MedAI Africa.</p>
+              </div>
+              <div class="relative">
+                <span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-emerald-600 border-2 border-white shadow"></span>
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-700">Décembre 2024</span>
+                <h4 class="font-bold text-slate-900 text-sm sm:text-base">Finaliste du Prix Annuel de la Recherche et de l'Innovation (PARI)</h4>
+                <p class="text-xs sm:text-sm text-slate-600 mt-0.5">Distinction nationale lors de l'édition organisée à Kindia, Guinée.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TAB 2: PROJETS & RÉALISATIONS -->
+    <div id="panel-projects" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 class="text-xl font-bold text-slate-900">Portfolio des Projets &amp; Réalisations</h2>
+          <p class="text-sm text-slate-500">6 projets technologiques majeurs mêlant logiciel, matériel électronique et intelligence artificielle</p>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button data-filter="all" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 text-white transition">Tous (6)</button>
+          <button data-filter="ia" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 transition">IA, Santé &amp; Éducation</button>
+          <button data-filter="civic" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 transition">Ville, Écologie &amp; Impact</button>
+          <button data-filter="code" class="filter-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-emerald-50 transition">Open-Source C++</button>
+        </div>
+      </div>
+
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Project 1: Sania -->
+        <div data-category="civic" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">Smart City &amp; Écologie</span>
+              <span class="text-xs text-slate-400 font-medium">Hardware + Marketplace</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Sania (Sanya)</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Écosystème intelligent de gestion des déchets et place de marché biface connectant trieurs, recycleurs et consommateurs. Intègre des poubelles intelligentes multi-compartiments (plastiques, canettes, déchets organiques).
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Co-développé avec Mariam (Business)</span>
+            <span class="font-semibold text-emerald-700">IoT · Web/Mobile</span>
+          </div>
+        </div>
+
+        <!-- Project 2: MedAI Africa -->
+        <div data-category="ia" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">Santé &amp; IA</span>
+              <span class="text-xs text-slate-400 font-medium">Lancé en 2025</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">MedAI Africa</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Projet d'innovation médicale associant du matériel optique à bas coût et de l'intelligence artificielle pour rendre le diagnostic médical plus accessible aux structures locales.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Optique bas coût + IA</span>
+            <span class="font-semibold text-emerald-700">Diagnostic Médical</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Eduguinee -->
+        <div data-category="ia" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">EdTech</span>
+              <span class="text-xs text-slate-400 font-medium">Exposé en avril 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Eduguinee</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Plateforme numérique de tutorat mettant en relation des parents d'élèves avec des étudiants-tuteurs vérifiés pour le soutien scolaire à domicile. Sélectionnée au Salon des Étudiants Entrepreneurs (avril 2026).
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Soutien scolaire vérifié</span>
+            <span class="font-semibold text-emerald-700">Next.js · Firebase</span>
+          </div>
+        </div>
+
+        <!-- Project 4: LT-vEB -->
+        <div data-category="code" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">Algorithmique C++</span>
+              <span class="text-xs text-slate-400 font-medium">Mars 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">LT-vEB (Logical Thermal van Emde Boas)</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Bibliothèque open-source en C++ publiée sur GitHub dédiée à l'optimisation de structures de données algorithmiques avancées.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <a href="https://github.com/Vpinoss626" target="_blank" rel="noopener noreferrer" class="underline hover:text-emerald-700">Voir sur GitHub</a>
+            <span class="font-semibold text-emerald-700">C++ · Open-Source</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Sira-card -->
+        <div data-category="civic" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">GovTech &amp; FinTech</span>
+              <span class="text-xs text-slate-400 font-medium">Gestion Municipale</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Sira-card</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Système de carte numérique et application mobile conçu pour moderniser le suivi des recettes municipales et la vérification des marchands sur le terrain.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Traçabilité &amp; Recettes</span>
+            <span class="font-semibold text-emerald-700">Mobile · Carte Numérique</span>
+          </div>
+        </div>
+
+        <!-- Project 6: VBG GUINÉE -->
+        <div data-category="civic" class="project-card bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">Impact Social</span>
+              <span class="text-xs text-slate-400 font-medium">Déc. 2025 – Fév. 2026</span>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">VBG GUINÉE</h3>
+            <p class="text-sm text-slate-600 mt-2 leading-relaxed">
+              Plateforme numérique de protection, d'information et d'assistance destinée à lutter contre les violences basées sur le genre en Guinée.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span>Protection &amp; Assistance</span>
+            <span class="font-semibold text-emerald-700">Plateforme Web/Mobile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: TEXTES PRÊTS À COPIER (LINKEDIN, GITHUB README, BIO COURTE) -->
+    <div id="panel-copy" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-slate-900">Kit Biographique Prêt à Copier-Coller</h2>
+        <p class="text-sm text-slate-600 mt-1">
+          Pour que ton nom ressorte immédiatement quand quelqu'un tape <strong>« Ibrahima Diallo Guinée »</strong>, <strong>« Ibrahima Diallo ESMT »</strong> ou <strong>« vpinoss »</strong> sur Google, copie ces textes dans tes profils publics.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Box 1: LinkedIn / About.me -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">1. Pour ton profil LinkedIn &amp; About.me</span>
+              <button id="btn-copy-linkedin" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition">
+                Copier ce texte
+              </button>
+            </div>
+            <pre id="text-linkedin" class="whitespace-pre-wrap font-sans text-xs sm:text-sm text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">Étudiant en 2e année de Licence en Télécommunications et Informatique (LTI) à l'ESMT et titulaire du Google IT Support Professional Certificate, je conçois des solutions numériques, électroniques et d'intelligence artificielle adaptées aux réalités africaines.
+
+Passionné par l'électronique (Proteus, KiCad, radio logicielle SDR), l'algorithmique C/C++ et le développement web/mobile (Next.js, Firebase, FlutterFlow, API Gemini), je transforme des problématiques locales en prototypes fonctionnels :
+• Sania (Sanya) : écosystème intelligent de gestion des déchets et marketplace circulaire.
+• Eduguinee : plateforme de mise en relation avec des étudiants-tuteurs vérifiés (présentée au Salon des Étudiants Entrepreneurs 2026).
+• MedAI Africa : diagnostic médical assisté par IA et matériel optique à bas coût.
+• LT-vEB : bibliothèque open-source en C++ d'optimisation de structures de données (GitHub : Vpinoss626).
+• Sira-card & VBG GUINÉE : solutions numériques pour le suivi des recettes municipales et la protection citoyenne.
+
+Fondateur de la communauté « Jeunes Innovateurs » sur la plateforme E-FONIJ (~100 membres), j'accompagne d'autres jeunes dans l'apprentissage de la programmation et les candidatures aux programmes d'innovation. Finaliste du prix PARI 2024 et du concours MIME (AUF) 2025.
+
+Contact : ad7733041@gmail.com | GitHub : https://github.com/Vpinoss626</pre>
+          </div>
+        </div>
+
+        <!-- Box 2: GitHub Profile README.md -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 flex flex-col justify-between space-y-4">
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">2. Pour ton GitHub (README.md public)</span>
+              <button id="btn-copy-github" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition">
+                Copier le Markdown
+              </button>
+            </div>
+            <pre id="text-github" class="whitespace-pre-wrap font-mono text-xs text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed"># Ibrahima Diallo (@vpinoss / Vpinoss626)
+
+**Étudiant en Télécommunications & Informatique (ESMT) | Développeur Full-Stack, Hardware & IA | Entrepreneur Tech à Conakry, Guinée**
+
+- Formation : Licence en Télécommunications et Informatique (LTI, 2e année) à l'ESMT & Certifié *Google IT Support Professional* (Coursera, 2026).
+- Communauté : Fondateur et leader de **Jeunes Innovateurs** sur E-FONIJ (~100 membres).
+- Distinctions : Finaliste **PARI 2024** (Kindia) · Finaliste **MIME AUF 2025** · Exposant au **Salon des Étudiants Entrepreneurs 2026**.
+
+### Projets Phares
+- **Sania (Sanya)** — Écosystème intelligent de gestion des déchets (poubelles intelligentes multi-compartiments & marketplace biface).
+- **MedAI Africa** — Matériel optique à bas coût combiné à l'IA pour le diagnostic médical accessible.
+- **Eduguinee** — Plateforme numérique connectant parents d'élèves et étudiants-tuteurs vérifiés.
+- **LT-vEB** — Bibliothèque C++ open-source (*Logical Thermal van Emde Boas*) pour l'optimisation de structures de données.
+- **Sira-card** — Carte numérique et application mobile de suivi des recettes municipales.
+- **VBG GUINÉE** — Plateforme numérique d'assistance contre les violences basées sur le genre.
+
+### Stack Technique
+- **Code & Web/Mobile** : C, C++, Next.js, Firebase, FlutterFlow
+- **IA & Outils** : API Gemini, Google AI Studio, Cursor, v0.dev
+- **Hardware & Télécoms** : Proteus 8, KiCad, Radio Logicielle (SDR), Réseaux
+
+- Contact : ad7733041@gmail.com | +224 626 46 51 58</pre>
+          </div>
+        </div>
+
+        <!-- Box 3: Bio Courte (Pitch / Salons / Réseaux sociaux) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 lg:col-span-2 space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold">3. Biographie courte (pour candidatures, salons, X/Twitter, Facebook)</span>
+            <button id="btn-copy-short" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold transition">
+              Copier la bio courte
+            </button>
+          </div>
+          <p id="text-short" class="text-sm text-slate-700 bg-slate-50 p-4 rounded-xl border border-slate-200 leading-relaxed">
+            Ibrahima Diallo (vpinoss / Vpinoss626) est un étudiant en Télécommunications et Informatique à l'ESMT Conakry, développeur full-stack/hardware et entrepreneur technologique guinéen. Fondateur de la communauté « Jeunes Innovateurs » sur E-FONIJ et finaliste des concours PARI 2024 et MIME (AUF) 2025, il conçoit des solutions alliant électronique, web/mobile et intelligence artificielle (Sania, MedAI Africa, Eduguinee, LT-vEB, Sira-card, VBG GUINÉE).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: GUIDE DE MISE EN LIGNE SUR GOOGLE -->
+    <div id="panel-publish" class="tab-panel hidden space-y-6">
+      <div class="bg-white rounded-2xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-5">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900">Comment rendre cette page visible sur Google gratuitement (en 3 minutes)</h2>
+            <p class="text-sm text-slate-600 mt-1">
+              Tu possèdes déjà le compte GitHub <strong>Vpinoss626</strong>. Tu peux héberger cette page gratuitement sur <code>https://vpinoss626.github.io</code> pour que Google l'indexe automatiquement.
+            </p>
+          </div>
+          <button id="btn-download-html-guide" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow transition shrink-0">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+            </svg>
+            <span>Télécharger index.html</span>
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-600 text-white text-xs font-bold">Étape 1</span>
+            <h3 class="font-bold text-slate-900 text-base">Ajoute ta photo et télécharge le fichier</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Clique sur <strong>« Ajouter ma photo »</strong> en haut de cette page pour insérer ta photo, puis clique sur <strong>« Télécharger index.html »</strong>. Ta photo sera directement intégrée dans le fichier.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-600 text-white text-xs font-bold">Étape 2</span>
+            <h3 class="font-bold text-slate-900 text-base">Crée le dépôt sur ton GitHub</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Sur <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" class="text-emerald-700 underline font-semibold">github.com/new</a>, crée un dépôt public nommé exactement <code>Vpinoss626.github.io</code>, puis importe le fichier <code>index.html</code> dedans.
+            </p>
+          </div>
+
+          <div class="p-5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-2">
+            <span class="inline-block px-2.5 py-0.5 rounded bg-emerald-600 text-white text-xs font-bold">Étape 3</span>
+            <h3 class="font-bold text-slate-900 text-base">Relie ton LinkedIn et ton GitHub</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Ajoute le lien <code>https://vpinoss626.github.io</code> sur ton profil GitHub et ton profil LinkedIn. Comme GitHub et LinkedIn sont indexés quotidiennement par Google, ta biographie ressortira dès qu'on cherchera ton nom.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-6 px-4 sm:px-6 mt-12">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        <strong class="text-slate-800">Ibrahima Diallo (vpinoss / Vpinoss626)</strong> — Conakry, Guinée · Biographie &amp; Portfolio Officiel
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://github.com/Vpinoss626" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-700 font-medium">GitHub</a>
+        <span>·</span>
+        <span>ad7733041@gmail.com</span>
+        <span>·</span>
+        <span>+224 626 46 51 58</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Toast helper
+    let toastTimeout = null;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const msgEl = document.getElementById('toast-msg');
+      msgEl.textContent = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      if (toastTimeout) clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2800);
+    }
+
+    // Copy helper with fallback for Canvas iframe
+    function copyTextToClipboard(text, label) {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(label + ' copié !');
+        }).catch(() => {
+          fallbackCopy(text, label);
+        });
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        showToast(label + ' copié !');
+      } catch (err) {
+        showToast('Impossible de copier automatiquement');
+      }
+      document.body.removeChild(ta);
+    }
+
+    // Navigation Tabs
+    const tabButtons = document.querySelectorAll('.nav-tab');
+    const tabPanels = {
+      bio: document.getElementById('panel-bio'),
+      projects: document.getElementById('panel-projects'),
+      copy: document.getElementById('panel-copy'),
+      publish: document.getElementById('panel-publish')
+    };
+
+    tabButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-tab');
+        tabButtons.forEach((b) => {
+          b.classList.remove('bg-emerald-600', 'text-white');
+          b.classList.add('text-slate-600');
+        });
+        btn.classList.add('bg-emerald-600', 'text-white');
+        btn.classList.remove('text-slate-600');
+
+        Object.keys(tabPanels).forEach((key) => {
+          if (key === target) {
+            tabPanels[key].classList.remove('hidden');
+          } else {
+            tabPanels[key].classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Project Filters
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-filter');
+        filterButtons.forEach((b) => {
+          b.classList.remove('bg-emerald-600', 'text-white');
+          b.classList.add('bg-slate-100', 'text-slate-700');
+        });
+        btn.classList.add('bg-emerald-600', 'text-white');
+        btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+        projectCards.forEach((card) => {
+          if (cat === 'all' || card.getAttribute('data-category') === cat) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Photo Upload & Preview (Base64)
+    const photoInput = document.getElementById('photo-upload');
+    const profileImg = document.getElementById('profile-img');
+    const avatarPlaceholder = document.getElementById('avatar-placeholder');
+
+    photoInput.addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        profileImg.src = evt.target.result;
+        profileImg.classList.remove('hidden');
+        avatarPlaceholder.classList.add('hidden');
+        showToast('Photo ajoutée à ta biographie !');
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Copy buttons
+    document.getElementById('btn-copy-email').addEventListener('click', () => {
+      copyTextToClipboard('ad7733041@gmail.com', 'Adresse e-mail');
+    });
+
+    document.getElementById('btn-copy-phone').addEventListener('click', () => {
+      copyTextToClipboard('+224 626 46 51 58', 'Numéro de téléphone');
+    });
+
+    document.getElementById('btn-copy-main-bio').addEventListener('click', () => {
+      const text = document.getElementById('main-bio-content').innerText.trim();
+      copyTextToClipboard(text, 'Biographie officielle');
+    });
+
+    document.getElementById('btn-copy-linkedin').addEventListener('click', () => {
+      const text = document.getElementById('text-linkedin').innerText.trim();
+      copyTextToClipboard(text, 'Biographie LinkedIn');
+    });
+
+    document.getElementById('btn-copy-github').addEventListener('click', () => {
+      const text = document.getElementById('text-github').innerText.trim();
+      copyTextToClipboard(text, 'README GitHub');
+    });
+
+    document.getElementById('btn-copy-short').addEventListener('click', () => {
+      const text = document.getElementById('text-short').innerText.trim();
+      copyTextToClipboard(text, 'Biographie courte');
+    });
+
+    // Download self-contained index.html (with embedded photo if uploaded)
+    function downloadHtmlFile() {
+      const htmlContent = '<!DOCTYPE html>\n' + document.documentElement.outerHTML;
+      const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Fichier index.html téléchargé !');
+    }
+
+    document.getElementById('btn-download-html-hero').addEventListener('click', downloadHtmlFile);
+    document.getElementById('btn-download-html-guide').addEventListener('click', downloadHtmlFile);
+  </script>
+</body>
+</html>
